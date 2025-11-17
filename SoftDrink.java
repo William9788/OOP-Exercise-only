@@ -10,9 +10,5 @@ public class SoftDrink extends Drink {
         return fizzy;
     }
 
-    @Override
-    public double calcPrice() {
-        double base = getValue();
-        return fizzy ? base + 0.5 : base;
-    }
+
 }
