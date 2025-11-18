@@ -12,7 +12,26 @@ System.out.println("Dog fetches the ball!");
 }
 public static void main(String[] args) {
 Dog dog = new Dog();
-Animal animal = dog;
+Animal animalReference = dog;//Upcast it to animal
+animalReference.makeSound();
+//animalReference.fetch(); 
+// Output Undefine value!
+if(animalReference instanceof Dog){
+    Dog dogReference = (Dog) animalReference;
+    dogReference.fetch();
+}
+else{
+System.err.println("Not a Dog,Cant downcast!");
+}
+//Not Safe Casting Example
+animalReference = new Animal();
+Dog wrongReference = (Dog) animalReference;
+wrongReference.fetch();//Not Executed
+}
+public class Puppy extends Dog{
+void play() {
+System.out.println ("Puppy is playing!");
+}
 
 }
 }
