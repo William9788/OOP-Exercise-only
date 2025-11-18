@@ -28,10 +28,9 @@ animalReference = new Animal();
 Dog wrongReference = (Dog) animalReference;
 wrongReference.fetch();//Not Executed
 }
-public class Puppy extends Dog{
+class Puppy extends Dog{
 void play() {
 System.out.println ("Puppy is playing!");
 }
-
 }
 }
