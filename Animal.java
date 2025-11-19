@@ -28,6 +28,7 @@ animalReference = new Animal();
 Dog wrongReference = (Dog) animalReference;
 wrongReference.fetch();//Not Executed
 }
+
 /*
  * • Create an Animal reference that points to a Puppy object.
 • Then downcast that Animal reference back to a Dog, and then again to a
